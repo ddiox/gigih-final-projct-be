@@ -5,4 +5,4 @@ This repository contains the backend of the Tokopedia Play Clone App for Final P
 ## Database Structure
 
 Database Structure using ERD diagram
-![alt text](https://github.com/ddiox/gigih-final-projct-be/blob/master/docs/erd.png?raw=true)
+![alt text](https://github.com/ddiox/gigih-final-projct-be/blob/master/docs/db.png?raw=true)
