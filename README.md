@@ -723,7 +723,7 @@ docker pull glenn24/api:latest
 docker run -p 8080:8080 -d glenn24/api:latest
 ```
 
-https://hub.docker.com/repository/docker/glenn24/ui/general
+https://hub.docker.com/repository/docker/glenn24/api/general
 
 Frontend application here:
-https://github.com/ddiox/gigih-final-projct-fe
+https://github.com/ddiox/gigih-final-project-fe
