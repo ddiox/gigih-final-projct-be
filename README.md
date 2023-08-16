@@ -636,9 +636,9 @@ Update comments.
 }
 ```
 
-## **DELETE /products/:id**
+## **DELETE /comments/:id**
 
-Delete comemnts.
+Delete comments.
 
 - **URL Params**  
   \_id
