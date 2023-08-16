@@ -714,13 +714,13 @@ http://localhost:8080
 1. Pull Docker Image from DockerHub
 
 ```
-docker pull glenn24/ui:latest
+docker pull glenn24/api:latest
 ```
 
 2. Run the container
 
 ```
-docker run -p 3000:3000 -d glenn24/ui:latest
+docker run -p 8080:8080 -d glenn24/api:latest
 ```
 
 https://hub.docker.com/repository/docker/glenn24/ui/general
