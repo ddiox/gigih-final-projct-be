@@ -727,3 +727,10 @@ https://hub.docker.com/repository/docker/glenn24/api/general
 
 Frontend application here:
 https://github.com/ddiox/gigih-final-project-fe
+
+## Tools
+
+- Express.js
+- MongoDB
+- MongoDB Atlas
+- Docker
