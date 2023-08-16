@@ -179,9 +179,9 @@ Update video.
 }
 ```
 
-## **PUT /videos/:id**
+## **DELETE /videos/:id**
 
-Update video.
+Delete video.
 
 - **URL Params**  
   \_id
