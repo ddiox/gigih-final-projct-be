@@ -109,7 +109,7 @@ Returns single video by id.
 
 ## **POST /videos**
 
-Create video
+Create video.
 
 - **URL Params**  
   None
@@ -145,7 +145,7 @@ Create video
 
 ## **PUT /videos/:id**
 
-Update video
+Update video.
 
 - **URL Params**  
   \_id
@@ -179,12 +179,12 @@ Update video
 }
 ```
 
-## **DELETE /videos/:id**
+## **PUT /videos/:id**
 
-Create video
+Update video.
 
 - **URL Params**  
-  id
+  \_id
 - **Data Params**  
   None
 - **Headers**  
@@ -195,10 +195,8 @@ Create video
 
 ```
 
-```
-
 {
-"message": "Video Deleted"
+     "message": "Video Deleted"
 }
 
 ```
@@ -208,11 +206,7 @@ Create video
   - Content:
 
 ```
-
 {
-"message": "Server Error"
+    "message": "Server Error"
 }
-
-```
-
 ```
