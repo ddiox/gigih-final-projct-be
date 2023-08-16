@@ -73,7 +73,7 @@ Returns all videos thumbnails.
 
 ## **GET /videos/:id**
 
-Returns single video by id.
+Returns single videos by id.
 
 - **URL Params**  
   \_id
@@ -384,7 +384,7 @@ Update products.
 - **URL Params**  
   \_id
 - **Data Params**  
-  VideoID, title, description, url, imageUrl, link, price
+  videoID, title, description, url, imageUrl, link, price
 - **Headers**  
   None
 - **Success Response:**
@@ -433,6 +433,227 @@ Delete product.
 
 {
      "message": "Product Deleted"
+}
+
+```
+
+- **Error Response:**
+  - Code: 505
+  - Content:
+
+```
+{
+    "message": "Server Error"
+}
+```
+
+## Comment Endpoint
+
+- comment object
+
+```
+{
+    "_id": ObjectId,
+    "videoID": ObjectId,
+    "username": String,
+    "comment": String,
+    "timestamp": Date
+}
+```
+
+## **GET /videos/:videoID/comments**
+
+Returns all comments with specified videoID.
+
+- **URL Params**  
+  videoID (ObjectId)
+- **Data Params**  
+  None
+- **Headers**  
+  None
+- **Success Response:**
+  - Code: 200
+  - Content:
+
+```
+[
+    {
+        "_id": ObjectId,
+        "username": String,
+        "comment": String,
+        "timestamp": Date
+    },
+]
+```
+
+- **Error Response:**
+  - Code: 505
+  - Content:
+
+```
+{
+    "message": "Server Error"
+}
+```
+
+## **POST /submit-content**
+
+Create a new comment with specified videoID.
+
+- **URL Params**  
+  None
+- **Data Params**  
+  username,
+  comment,
+  videoID
+- **Headers**  
+  None
+- **Success Response:**
+  - Code: 201
+  - Content:
+
+```
+{
+    "success": true
+}
+```
+
+- **Error Response:**
+  - Code: 500
+  - Content:
+
+```
+{
+    "message": "Server Error",
+    "success": false
+}
+```
+
+## **GET /comments/:id**
+
+Returns single comments by id.
+
+- **URL Params**  
+  \_id
+- **Data Params**  
+  None
+- **Headers**  
+  None
+- **Success Response:**
+  - Code: 200
+  - Content:
+
+```
+
+{
+    "_id": ObjectId,
+    "videoID": ObjectId,
+    "username": String,
+    "comment": String,
+    "timestamp": Date
+}
+```
+
+- **Error Response:**
+  - Code: 505
+  - Content:
+
+```
+{
+    "message": "Server Error"
+}
+```
+
+## **POST /comments**
+
+Create comments.
+
+- **URL Params**  
+  None
+- **Data Params**  
+  videoID, username, comment, timestamp
+- **Headers**  
+  None
+- **Success Response:**
+  - Code: 201
+  - Content:
+
+```
+
+{
+    "_id": ObjectId,
+    "videoID": ObjectId,
+    "username": String,
+    "comment": String,
+    "timestamp": Date
+}
+
+```
+
+- **Error Response:**
+  - Code: 505
+  - Content:
+
+```
+{
+    "message": "Server Error"
+}
+```
+
+## **PUT /comments/:id**
+
+Update comments.
+
+- **URL Params**  
+  \_id
+- **Data Params**  
+  videoID, username, comment, timestamp
+- **Headers**  
+  None
+- **Success Response:**
+  - Code: 200
+  - Content:
+
+```
+
+{
+    "_id": ObjectId,
+    "videoID": ObjectId,
+    "username": String,
+    "comment": String,
+    "timestamp": Date
+}
+
+```
+
+- **Error Response:**
+  - Code: 505
+  - Content:
+
+```
+{
+    "message": "Server Error"
+}
+```
+
+## **DELETE /products/:id**
+
+Delete comemnts.
+
+- **URL Params**  
+  \_id
+- **Data Params**  
+  None
+- **Headers**  
+  None
+- **Success Response:**
+  - Code: 200
+  - Content:
+
+```
+
+{
+     "message": "Comment Deleted"
 }
 
 ```
