@@ -667,3 +667,63 @@ Delete comemnts.
     "message": "Server Error"
 }
 ```
+
+## How to run in local
+
+1. Clone this repository
+
+```
+git clone https://github.com/ddiox/gigih-final-projct-be.git
+```
+
+2. Install dependencies
+
+```
+npm install
+```
+
+3. Copy .env.example to .env
+
+```
+cp .env.example .env // Linux User
+copy .env.example .env // Windows User
+```
+
+4. Open .env file and put your database connection url:
+
+```
+DB_URL = mongodb://127.0.0.1:27017/put_your_database_name_here
+```
+
+5. Run the server
+
+```
+npm start
+or
+node server.js
+```
+
+6. Server is running on port 8080
+
+```
+http://localhost:8080
+```
+
+## How to run in Docker
+
+1. Pull Docker Image from DockerHub
+
+```
+docker pull glenn24/ui:latest
+```
+
+2. Run the container
+
+```
+docker run -p 3000:3000 -d glenn24/ui:latest
+```
+
+https://hub.docker.com/repository/docker/glenn24/ui/general
+
+Frontend application here:
+https://github.com/ddiox/gigih-final-projct-fe
