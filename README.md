@@ -1,4 +1,4 @@
-# Mid Term Project (Backend Only)
+# Final Project (Back End)
 
 This repository contains the backend of the Tokopedia Play Clone App for Final Project from the Generasi Gigih 3.0 program.
 
