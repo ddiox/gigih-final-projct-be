@@ -210,3 +210,239 @@ Delete video.
     "message": "Server Error"
 }
 ```
+
+## Product Endpoint
+
+- product object
+
+```
+{
+    "_id": ObjectId,
+    "videoID": ObjectId,
+    "title": String,
+    "description": String,
+    "imageUrl": String,
+    "link": String,
+    "price": Float
+}
+```
+
+## **GET /videos/:videoID/products**
+
+Returns all products with specified videoID.
+
+- **URL Params**  
+  videoID (ObjectId)
+- **Data Params**  
+  None
+- **Headers**  
+  None
+- **Success Response:**
+  - Code: 200
+  - Content:
+
+```
+[
+    {
+        "_id": ObjectId,
+        "title": String,
+        "description": String,
+        "imageUrl": String,
+        "link": String,
+        "price": Float
+    },
+]
+```
+
+- **Error Response:**
+  - Code: 505
+  - Content:
+
+```
+{
+    "message": "Server Error"
+}
+```
+
+## **GET /products**
+
+Returns all products.
+
+- **URL Params**  
+  None
+- **Data Params**  
+  None
+- **Headers**  
+  None
+- **Success Response:**
+  - Code: 200
+  - Content:
+
+```
+[
+    {
+        "_id": ObjectId,
+        "videoID": ObjectId,
+        "title": String,
+        "description": String,
+        "imageUrl": String,
+        "link": String,
+        "price": Float
+    }
+]
+```
+
+- **Error Response:**
+  - Code: 505
+  - Content:
+
+```
+{
+    "message": "Server Error"
+}
+```
+
+## **GET /products/:id**
+
+Returns single products by id.
+
+- **URL Params**  
+  \_id
+- **Data Params**  
+  None
+- **Headers**  
+  None
+- **Success Response:**
+  - Code: 200
+  - Content:
+
+```
+
+{
+    "_id": ObjectId,
+    "videoID": ObjectId,
+    "title": String,
+    "description": String,
+    "imageUrl": String,
+    "link": String,
+    "price": Float
+}
+```
+
+- **Error Response:**
+  - Code: 505
+  - Content:
+
+```
+{
+    "message": "Server Error"
+}
+```
+
+## **POST /products**
+
+Create product.
+
+- **URL Params**  
+  None
+- **Data Params**  
+  videoID, title, description, imageUrl, link, price
+- **Headers**  
+  None
+- **Success Response:**
+  - Code: 201
+  - Content:
+
+```
+
+{
+    "_id": ObjectId,
+    "videoID": ObjectId,
+    "title": String,
+    "description": String,
+    "imageUrl": String,
+    "link": String,
+    "price": Float
+}
+
+```
+
+- **Error Response:**
+  - Code: 505
+  - Content:
+
+```
+{
+    "message": "Server Error"
+}
+```
+
+## **PUT /products/:id**
+
+Update products.
+
+- **URL Params**  
+  \_id
+- **Data Params**  
+  VideoID, title, description, url, imageUrl, link, price
+- **Headers**  
+  None
+- **Success Response:**
+  - Code: 200
+  - Content:
+
+```
+
+{
+    "_id": ObjectId,
+    "videoID": ObjectId,
+    "title": String,
+    "description": String,
+    "imageUrl": String,
+    "link": String,
+    "price": Float
+}
+
+```
+
+- **Error Response:**
+  - Code: 505
+  - Content:
+
+```
+{
+    "message": "Server Error"
+}
+```
+
+## **DELETE /products/:id**
+
+Delete product.
+
+- **URL Params**  
+  \_id
+- **Data Params**  
+  None
+- **Headers**  
+  None
+- **Success Response:**
+  - Code: 200
+  - Content:
+
+```
+
+{
+     "message": "Product Deleted"
+}
+
+```
+
+- **Error Response:**
+  - Code: 505
+  - Content:
+
+```
+{
+    "message": "Server Error"
+}
+```
